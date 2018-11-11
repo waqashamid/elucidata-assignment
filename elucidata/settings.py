@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bouncer',
+    'analytics',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +72,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'elucidata.wsgi.application'
 
+AUTH_USER_MODEL = 'bouncer.User'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
