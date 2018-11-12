@@ -12,3 +12,6 @@ class Base(models.Model):
 class Data(Base):
     name = models.CharField(null=True, max_length=40)
     file = models.FileField(upload_to='media/')
+
+    def __str__(self):
+        return self.name
