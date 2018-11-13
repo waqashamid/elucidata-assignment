@@ -6,10 +6,7 @@ from .serializer import *
 from django.db.utils import DatabaseError
 from django.http import HttpResponse, StreamingHttpResponse
 import pandas as pd
-try:
-    from io import BytesIO as IO # for modern python
-except ImportError:
-    from StringIO import StringIO as IO # for legacy python
+from io import BytesIO as IO
 
 class UploadFile(views.APIView):
 
