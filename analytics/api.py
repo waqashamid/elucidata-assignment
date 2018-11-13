@@ -65,10 +65,12 @@ class RoundOffRetentionTime(views.APIView):
             df = df.assign(retention_time_roundoff=(df.retention_time))
 
             df.retention_time_roundoff = df.retention_time_roundoff.astype(float).round().astype(int)
+            retention_time_roundoff = df['retention_time_roundoff']
 
             excel_file = IO()
             xlwriter = pd.ExcelWriter(excel_file, engine='xlsxwriter')
-            df.to_excel(xlwriter, 'Raw Data')
+            df.to_excel(xlwriter, 'raw_data_1')
+            retention_time_roundoff.to_excel(xlwriter, 'raw_data_2')
             xlwriter.save()
             xlwriter.close()
             excel_file.seek(0)
