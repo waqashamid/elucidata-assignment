@@ -6,4 +6,5 @@ urlpatterns = [
     url(r'^upload$', UploadFile.as_view(), name='upload_file'),
     url(r'^process/task1$', FilterPCLPCPLasmogen.as_view(), name='perform_task1'),
     url(r'^process/task2$', RoundOffRetentionTime.as_view(), name='perform_task2'),
+    url(r'^process/task3$', CalculateMeanOfMetabolites.as_view(), name='perform_task3'),
 ]
