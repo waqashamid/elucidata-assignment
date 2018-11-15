@@ -52,3 +52,14 @@ GET `localhost:8000/api/v1/analytics/process/task2`
 ```
 File containing processed output.
 ```
+
+**2. Perform task 3:**
+
+**_Request_:**
+
+GET `localhost:8000/api/v1/analytics/process/task3`
+
+**_Response_:**
+```
+File containing processed output.
+```
